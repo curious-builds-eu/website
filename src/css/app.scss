@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap");
+
+:root {
+  --app-font: "Inter", system-ui, -apple-system, "Segoe UI", "Noto Sans", Arial, sans-serif;
+
+  --bg: #f2f5f7;
+  --fg: #0b1220;
+  --muted: #595f62;
+  --accent: #8db477;
+  --accent-2: #a5d18b;
+  --card: #f7f8fb;
+  --border: #e5e7ef;
+  --chip: #eef2ff;
+
+  --dark-bg: #0e1116;
+  --dark-fg: #e6edf3;
+  --dark-muted: #9aa4b2;
+  --dark-accent: #5d774f;
+  --dark-accent-2: #2e3b26;
+  --dark-card: #121621;
+  --dark-border: #1f2430;
+  --dark-chip: #1a2030;
+}
+
+/* Quasar override when user toggles dark mode */
+.body--dark,
+.q-dark {
+  --bg: var(--dark-bg);
+  --fg: var(--dark-fg);
+  --muted: var(--dark-muted);
+  --accent: var(--dark-accent);
+  --accent-2: var(--dark-accent-2);
+  --card: var(--dark-card);
+  --border: var(--dark-border);
+  --chip: var(--dark-chip);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--app-font);
+  font-size: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+.brand .logo {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+.brand-text span {
+  color: var(--fg);
+}
+.subtitle {
+  font-size: 20px;
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 18px;
+}
+.cta .button {
+  appearance: none;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.subscribe {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px;
+  border-radius: 12px;
+}
+.subscribe input[type="email"] {
+  background: transparent;
+  min-width: 16rem;
+}
+/* Accent links */
+a:not(.button) {
+  color: var(--accent);
+  text-decoration-color: color-mix(in oklab, var(--accent) 50%, transparent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+a:not(.button):hover {
+  color: var(--accent-2);
+  text-decoration-color: var(--accent-2);
+}
+a:not(.button):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.q-card {
+  border-radius: 10px;
+}
+
+/* Hero as single column; image is floated within the content now */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 64px 0 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/curious-builds-logo-no-text.png") no-repeat center;
+  background-size: min(80vmin, 720px);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.body--dark .hero::after,
+.q-dark .hero::after {
+  filter: invert(1) brightness(1.2);
+  opacity: 0.18;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.image-float {
+  float: right;
+  width: min(40%, 320px);
+  margin: 4px 0 8px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 14px;
+  }
+  .brand {
+    gap: 8px;
+    padding: 8px 0;
+  }
+  .brand .logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero {
+    padding: 36px 0 12px;
+  }
+  .subtitle {
+    margin-bottom: 16px;
+  }
+  .hero::after {
+    background-size: min(70vmin, 520px);
+    opacity: 0.22;
+  }
+
+  .image-float {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 8px 0 12px;
+  }
+
+  .button {
+    padding: 10px 14px;
+  }
+
+  .subscribe {
+    padding: 4px;
+  }
+  .subscribe input[type="email"] {
+    min-width: 180px;
+    padding: 8px;
+  }
+}

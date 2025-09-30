@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.log
+
+_data/**/*.js
+dist/
+.vscode/
+.idea/
+.quasar/
