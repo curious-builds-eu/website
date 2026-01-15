@@ -9,6 +9,8 @@ The company has developed its own IoT devices for small scale farms and
 homesteads, focusing on automating irrigation and task management around the
 entire lifecycle of crops.
 
+For more information on this line of products, visit https://cornucopia-machines.eu/[Cornucopia Machines].
+
 == Software Automation Solutions
 
 Our company has been supplying automation solutions for software development
