@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  src: url('../fonts/Lora-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  src: url('../fonts/Lora-Italic-VariableFont_wght.ttf');
+}
+
+@import "variables";
+
+.navigation-item {
+  text-transform: uppercase;
+}
+
+a {
+  transition: none;
+}
+
+.navigation a:hover {
+  text-decoration: none;
+}
+
+.image-float-right img {
+  display: block;
+  float: right;
+  width: 100%;
+  border-radius: 12px;
+  width: 320px;
+  margin: 4px 0 8px 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 600px) {
+  .image-float-right img {
+    float: none;
+    width: 100%;
+    margin: 8px 0 12px;
+  }
+}
+
+.navigation-title .title-first-word {
+  color: $link-color;
+}
+
+body.colorscheme-dark .navigation-title .title-first-word {
+  color: $link-color-dark;
+}

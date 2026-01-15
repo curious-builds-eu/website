@@ -1,0 +1,35 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Curious Builds'
+theme = 'hugo-coder'
+languagecode = 'en-us'
+defaultContentLanguage = 'en'
+
+[security.exec]
+allow = ['^asciidoctor$']
+
+[params]
+company = 'Curious Builds'
+description = 'Information technology solutions for curious minds.'
+colorScheme = "auto"
+hidecolorschemetoggle = true
+customSCSS = ["scss/custom.scss"]
+commit = "https://github.com/luizdepra/hugo-coder/tree/"
+contactEmail = "hello@curious-builds.eu"
+
+# Menu
+# [[menu.main]]
+# name = "Blog"
+# weight = 1
+# url = "/blog/"
+
+# Social links
+[[params.social]]
+name = "GitHub"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/curious-builds-eu/"
+
+[params.umami]
+siteID = "fe9bcb3b-c9dd-4ac6-9a0c-c7ad99a64453"
+scriptURL = "https://analytics.cornucopia-machines.eu/script.js"
