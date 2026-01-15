@@ -1,0 +1,43 @@
+= Curious Builds
+:page-title: Curious Builds
+
+_Information technology consulting._
+
+== Agricultural IoT Solutions
+
+The company has developed its own IoT devices for small scale farms and
+homesteads, focusing on automating irrigation and task management around the
+entire lifecycle of crops.
+
+== Software Automation Solutions
+
+Our company has been supplying automation solutions for software development
+teams since 2015. We help develop innovative solutions for building software
+that help teams improve their productivity and efficiency.
+
+== Our Team
+
+++++
+<div style="
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+">
+
+  <figure style="margin:0">
+    <img src="images/team/lorant.jpeg" alt="Lóránt Pintér" style="width:100%; height:auto; display:block;">
+    <figcaption style="margin-top:0.5rem; font-size:0.95em; opacity:0.85;">
+      <a href="https://www.linkedin.com/in/lorantpinter/">Lóránt Pintér</a> &mdash; Founder, lead engineer
+    </figcaption>
+  </figure>
+
+  <figure style="margin:0">
+    <img src="images/team/melinda.jpeg" alt="Melinda Tünde Dóra" style="width:100%; height:auto; display:block;">
+    <figcaption style="margin-top:0.5rem; font-size:0.95em; opacity:0.85;">
+      <a href="https://www.linkedin.com/in/doramelindatunde/">Melinda Tünde Dóra</a> &mdash; Research lead
+    </figcaption>
+  </figure>
+
+</div>
+++++
